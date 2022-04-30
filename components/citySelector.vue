@@ -1,5 +1,5 @@
 <template>
-  <div class="centered">
+  <div>
     <p>Selected {{ selected }}</p>
     <b-field label="Choose a city">
       <b-autocomplete
@@ -62,11 +62,4 @@ export default {
 </script>
 
 <style>
-.centered {
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
-  padding: 1ch;
-}
 </style>

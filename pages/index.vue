@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="centered">
     <city-selector />
     <forecast-display />
   </div>
@@ -13,3 +13,13 @@ export default {
   name: 'IndexPage',
 }
 </script>
+
+<style scoped>
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  padding: 1ch;
+}
+</style>
