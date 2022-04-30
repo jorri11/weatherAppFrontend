@@ -20,12 +20,18 @@ export default {
   name: 'citySelector',
   methods: {
     async handleChange() {
-      this.loading = true
-      const res = await this.$axios.$get(
-        `http://127.0.0.1:8000/nowcast?lat=${this.selected.lat}&lon=${this.selected.lon}`
-      )
-      this.$store.commit('forecast/update', res)
-      this.loading = false
+      try {
+        this.loading = true
+        const res = await this.$axios.$get(
+          `http://127.0.0.1:8000/nowcast?lat=${this.selected.lat}&lon=${this.selected.lon}`
+        )
+        this.$store.commit('forecast/update', res)
+        this.loading = false
+      } catch (error) {
+        console.error('Noe skjedde')
+        console.error(error)
+        this.loading = false
+      }
     },
   },
   data() {
