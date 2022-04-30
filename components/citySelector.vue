@@ -46,7 +46,9 @@ export default {
     selected(newSelected, oldSelected) {
       if (newSelected) {
         this.handleChange()
+        return
       }
+      this.$store.commit('forecast/clear')
     },
   },
   computed: {

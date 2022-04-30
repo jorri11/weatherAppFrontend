@@ -5,5 +5,8 @@ export const state = () => ({
 export const mutations = {
     update(state, nowcast) {
         state.nowcast = nowcast
+    },
+    clear(state) {
+        state.nowcast = undefined
     }
 }
